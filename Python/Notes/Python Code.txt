@@ -1,0 +1,55 @@
+Chris Stewart
+
+Wednesday 28th:
+def sleep_in(weekday, vacation):
+  return (not weekday or vacation)
+  
+def monkey_trouble(a_smile, b_smile):
+  return ((a_smile and b_smile) or (not a_smile and not b_smile))
+  
+def sum_double(a, b):
+  sum = a + b
+  if a == b:
+    sum = sum * 2
+  return sum
+
+Friday 30th:
+>>> (-1)**(0.5)
+(6.123233995736766e-17+1j)
+>>> (-4)**(0.5)
+(1.2246467991473532e-16+2j)
+>>> True
+True
+>>> true
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'true' is not defined
+>>> if 0: print"hi"
+  File "<stdin>", line 1
+    if 0: print"hi"
+                  ^
+SyntaxError: invalid syntax
+>>> if [5454]: print("hi")
+...
+hi
+>>> ls1 = [1,2,3]
+>>> ls2 = [1,2,3]
+>>> ls1 == ls2
+True
+>>> ls1 is ls2
+False
+>>> 3 is 3
+True
+>>> 3 is (1+2)
+True
+>>> name = 'name'
+>>> name
+'name'
+>>> name= 'Chris Stewart'
+>>> name
+'Chris Stewart'
+>>> True or "Ham Sandwich"
+True
+>>> True and "Ham Sandwich"
+'Ham Sandwich'
+>>>
