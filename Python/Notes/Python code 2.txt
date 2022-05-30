@@ -1,0 +1,33 @@
+Chris Stewart
+Week 2:
+def diff21(n):
+  if n > 21:
+    return (n - 21)*2
+  else:
+    return 21-n
+	
+def parrot_trouble(talking, hour):
+  return (hour < 7 or hour >20) and (talking is True)
+
+def makes10(a, b):
+  return (a +b == 10) or ((a == 10) or (b == 10))
+  
+def near_hundred(n):
+  return ((abs(100 - n) <= 10) or (abs(200 - n) <= 10))
+  
+def pos_neg(a, b, negative):
+  if negative == True:
+    return a < 0 and b < 0
+  else:
+    return (a < 0 or b < 0) and (a > 0 or b > 0)
+	
+def not_string(str):
+  if len(str) >= 3 and str[:3] == "not":
+    return str
+  else:
+    return "not " + str
+	
+def missing_char(str, n):
+  front = str[:n]
+  back = str[n+1:]
+  return front + back

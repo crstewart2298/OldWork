@@ -1,0 +1,72 @@
+Chris Stewart
+Week 8:
+
+class Animal:
+    def __init__(self):
+        print("in animal initializer")
+
+    def make_noise(self):
+        print(self.noise)
+	
+	def eat(self, food):
+        print('munnchh...muunncchh...')
+
+class Dog(Animal):
+    def __init__(self, name, weight, color):
+        super().__init__()
+        self.name = name
+        self.weight = weight
+        self.color = color
+        self.noise = 'woof'
+        print("in dog initializer")
+
+class Frog(Animal):
+    def __init__(self, name, weight, color):
+        super().__init__()
+        self.name = name
+        self.weight = weight
+        self.color = color
+        self.noise = 'ribbit'
+        print("in frog initializer")
+
+class Pig(Animal):
+    def __init__(self, name, weight, color):
+        super().__init__()
+        self.name = name
+        self.weight = weight
+        self.color = color
+        self.noise = 'oink'
+        print("in pig initializer")
+		
+class Squirrel(Animal):
+    def __init__(self, name, weight, color):
+        super().__init__()
+        self.name = name
+        self.weight = weight
+        self.color = color
+        self.noise = 'squeek'
+        print("in squirrel initializer")
+		
+>>> d = Dog("Dozer", 60, "fawn")
+in animal initializer
+in dog initializer
+>>> d.make_noise()
+woof
+>>> 
+================ RESTART: C:/Users/thund/Desktop/Python 7.py ================
+>>> f = Frog("Skipper", 1, "forest")
+in animal initializer
+in frog initializer
+>>> f.make_noise()
+ribbit
+>>> p = Pig("Snowball", 120, "pink")
+in animal initializer
+in pig initializer
+>>> p.make_noise()
+oink
+>>> s= Squirrel("Puff", 1, "grey")
+in animal initializer
+in squirrel initializer
+>>> s.eat('nut')
+munnchh...muunncchh...
+>>>  

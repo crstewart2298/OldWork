@@ -1,0 +1,81 @@
+Chris Stewart
+
+Week 3:
+>>> (5, 6)
+(5, 6)
+>>> (5,)
+(5,)
+>>> 5, 6, 7
+(5, 6, 7)
+>>> x, y, z = 5, 6, 7
+>>> x
+5
+>>> y
+6
+>>> z
+7
+>>> {1, 2, 3}| {2}
+{1, 2, 3}
+>>> {1, 2, 3}| {2, 5}
+{1, 2, 3, 5}
+>>> {1, 2, 3}- {5}
+{1, 2, 3}
+>>> {1, 2, 3} & {5}
+set()
+>>> {1, 2, 3} & {3}
+{3}
+>>> {1, 2, 3} & {1}
+{1}
+>>> {1, 2, 3} ^ {1}
+{2, 3}
+>>> if False:
+...     pass
+... else:
+...     print("Chris Stewart")
+...
+Chris Stewart
+>>> for x in (3, 3, 5, 6, 7, 7):
+...     print(x)
+...
+3
+3
+5
+6
+7
+7
+>>> for x in (100, 200, 300):
+...  print(x*2)
+...
+200
+400
+600
+>>> for x in (600, 3000, 5000):
+...     print(x*2)
+...
+1200
+6000
+10000
+>>> d = {'a': 100, 'b': 200, 'c': 300}
+>>> for x in d:
+...     d[x] = 2*d[x]
+...     print(d[x])
+...
+200
+400
+600
+>>>
+
+def priceIsRight(bid1, bid2, actualRetailPrice):
+  if bid1 == bid2 or (bid1 > actualRetailPrice and bid2 > actualRetailPrice):
+    return 0
+  else:
+     diff1 = actualRetailPrice - bid1
+     diff2 = actualRetailPrice - bid2
+  if bid1 > actualRetailPrice:
+    return 2
+  elif bid2 > actualRetailPrice:
+    return 1
+  elif diff1> diff2:
+    return 2
+  else:
+    return 1

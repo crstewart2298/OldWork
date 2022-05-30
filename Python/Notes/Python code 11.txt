@@ -1,0 +1,42 @@
+Chris Stewart
+Week 11:
+def lone_sum(a, b, c):
+  if (c==a)and(a==b):
+    return 0
+  elif b == c:
+    return a
+  elif c == a:
+    return b
+  elif a ==b:
+    return c
+  else:
+    return a+b+c
+	
+def lucky_sum(a, b, c):
+  if a == 13:
+    return 0
+  elif b == 13:
+    return a
+  elif c == 13:
+    return a+b
+  else:
+    return a+b+c
+	
+def no_teen_sum(a, b, c):
+  sum = a+b+c
+  if (a >= 13) and (a <= 19):
+    a = fix_teen(a)
+    sum = a+b+c
+  if (b >= 13) and (b <= 19):
+    b = fix_teen(b)
+    sum = a+b+c
+  if (c >= 13) and (c <= 19):
+    c = fix_teen(c)
+    sum = a+b+c
+  return sum
+
+def fix_teen(n):
+  if (n == 15) or (n == 16):
+    return n
+  else:
+    return 0

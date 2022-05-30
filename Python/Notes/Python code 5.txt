@@ -1,0 +1,56 @@
+Chris Stewart
+Week 5:
+
+def sum3(nums):
+  a = nums[0]
+  b = nums[1]
+  c = nums[2]
+  return a + b + c
+  
+def rotate_left3(nums):
+  a = nums[0]
+  b = nums[1]
+  c = nums[2]
+  nums[0] = b
+  nums[1] = c
+  nums[2] = a
+  return nums
+
+def reverse3(nums):
+  a = nums[0]
+  b = nums[1]
+  c = nums[2]
+  nums[0] = c
+  nums[2] = a
+  return nums
+  
+>>> def even_numbers(limit):
+		x = 0
+		while x < limit:
+			yield x
+			x += 2
+		
+>>> def factors(x):
+		p = 1
+		while p <= x:
+			if x % p == 0:
+				yield p
+        p += 1
+		
+>>> def prime_factors(x):
+		p = 2
+		while p <= x:
+			if x % p == 0 and len(list(factors(p))) == 2:
+				yield p
+			p += 1
+			
+>>> def factorial(x):
+		if x == 0:
+			return 1
+		return factorial(x-1)*x
+		
+jshell> int addTwoNumbers(int x, int y) {return x + y;}
+|  created method addTwoNumbers(int,int)
+
+jshell> addTwoNumbers(51, 27)
+$3 ==> 78

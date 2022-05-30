@@ -1,0 +1,149 @@
+Chris Stewart
+Week 10:
+>>> def f(x):
+	print("Hi, I'm f")
+
+	
+>>> def g():
+	print("Hi, I'm g I will call f")
+	f()
+
+	
+>>> g()
+Hi, I'm g I will call f
+Traceback (most recent call last):
+  File "<pyshell#6>", line 1, in <module>
+    g()
+  File "<pyshell#5>", line 3, in g
+    f()
+TypeError: f() missing 1 required positional argument: 'x'
+>>> def g():
+	print("Hi, I'm g I will call f")
+	f(5)
+
+	
+>>> g()
+Hi, I'm g I will call f
+Hi, I'm f
+>>> def f(x):
+	print("Hi, I'm f")
+	print(x/0)
+
+	
+>>> g()
+Hi, I'm g I will call f
+Hi, I'm f
+Traceback (most recent call last):
+  File "<pyshell#13>", line 1, in <module>
+    g()
+  File "<pyshell#8>", line 3, in g
+    f(5)
+  File "<pyshell#12>", line 3, in f
+    print(x/0)
+ZeroDivisionError: division by zero
+>>> def fact(x):
+	if x > 1:
+		return x * fact(x-1)
+	else:
+		return 5/0
+
+>>> fact(24)
+Traceback (most recent call last):
+  File "<pyshell#20>", line 1, in <module>
+    fact(24)
+  File "<pyshell#19>", line 3, in fact
+    return x * fact(x-1)
+  File "<pyshell#19>", line 3, in fact
+    return x * fact(x-1)
+  File "<pyshell#19>", line 3, in fact
+    return x * fact(x-1)
+  [Previous line repeated 20 more times]
+  File "<pyshell#19>", line 5, in fact
+    return 5/0
+ZeroDivisionError: division by zero
+>>> def add_two_number(x,y):
+	if not isinstance(x,int) or not isinstance(y,int):
+		raise TypeError()
+	if x < 0 or y < 0:
+		raise ValueError()
+
+	
+>>> add_two_number(5,-6)
+Traceback (most recent call last):
+  File "<pyshell#7>", line 1, in <module>
+    add_two_number(5,-6)
+  File "<pyshell#6>", line 5, in add_two_number
+    raise ValueError()
+ValueError
+>>> add_two_number(5,'-6')
+Traceback (most recent call last):
+  File "<pyshell#8>", line 1, in <module>
+    add_two_number(5,'-6')
+  File "<pyshell#6>", line 3, in add_two_number
+    raise TypeError()
+TypeError
+>>> 
+
+Java:
+public boolean cigarParty(int cigars, boolean isWeekend) {
+  if (isWeekend){
+    if( cigars >= 40){
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+  else{
+    if(cigars >= 40 & cigars <=60){
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+}
+
+public boolean squirrelPlay(int temp, boolean isSummer) {
+  if(isSummer){
+    if(temp <= 100 & temp >= 60){
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+  else{
+    if(temp <= 90 & temp >= 60){
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+}
+
+public int caughtSpeeding(int speed, boolean isBirthday) {
+  if (isBirthday){
+    if(speed <= 65){
+      return 0;
+    }
+    else if(speed >= 66 & speed <= 85 ){
+      return 1;
+    }
+    else{
+      return 2;
+    }
+  }
+  else{
+    if(speed <= 60){
+      return 0;
+    }
+    else if(speed >= 61 & speed <= 80 ){
+      return 1;
+    }
+    else{
+      return 2;
+    }
+  }
+}
