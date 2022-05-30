@@ -1,0 +1,9 @@
+h1{color: blue;
+background-color: red;
+}
+h2{background-color: blue;
+color: black;}
+#WildLife h2{background-color: lawngreen;
+    color: black;
+}
+#States{font: ariel}

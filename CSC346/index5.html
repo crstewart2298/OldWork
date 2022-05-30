@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style3.css">
+        <title>Mad Lib</title>
+
+        <script>        
+            function changeBackground(color){
+                var elements = document.getElementsByClassName('madlib');
+                for(var i = 0; i < elements.length; i++){
+                    elements[i].style.backgroundColor = color;
+                    }
+            }
+        
+        </script>
+        
+    </head>
+    <body>
+        <div class="form">
+            <label>Person 1: </label><input type="text" name="properNoun1" id="Person1" required>
+            <br>
+            <label>Person 2: </label><input type="text" name="properNoun2" id="Person2" required>
+            <br>
+            <label>Animal 1: </label><input type="text" name="animal" id="Animal1" required>
+            <br>
+            <label>Animal Body Part: </label><input type="text" name="part1" id="part1" required>
+            <br>
+            <label>Thing 1: </label><input type="text" name="thing1" id="thing1" required>
+            <br>
+            <label>Thing 2: </label><input type="text" name="thing2" id="thing2" required>
+            <br>
+            <label>Thing 3: </label><input type="text" name="thing3" id="thing3" required>
+            <br>
+            <label>Thing 4: </label><input type="text" name="thing4" id="thing4" required>
+            <br>
+            <label>Adjective 1: </label><input type="text" name="adjective1" required>
+        </div>
+        
+        <div class="madlib">
+            <p>
+                He sat up and <span class="_properNoun1_">&nbsp;</span>s heavy <span id="_thing1_">&nbsp;</span> fell off him. The hut was full of sunlight, the storm was over, <span class="_properNoun1_">&nbsp;</span> himself was asleep on 
+                the <span id="_adjective1_">&nbsp;</span> <span id="_thing2_">&nbsp;</span>, and there was an <span class="_animal_">&nbsp;</span> rapping its claw on the window, a <span class="_thing3_">&nbsp;</span> held in its <span id="_part_">&nbsp;</span>. <span id="_properNoun2_">&nbsp;</span> scrambled to his feet, 
+                so happy he felt as though a large balloon was swelling inside him. He went straight to the window and jerked it open. The <span class="_animal_">&nbsp;</span> swooped in 
+                and dropped the <span class="_thing3_">&nbsp;</span> on top of <span class="_properNoun1_">&nbsp;</span>, who did not wake up. The <span class="_animal_">&nbsp;</span> then fluttered onto the floor and began to attack <span class="_properNoun1_">&nbsp;</span>s
+                <span id="_thing4_">&nbsp;</span>.
+            </p>
+            <label for="white" checked>Hidden:</label><input type="radio" id="white" name="Background" onclick="changeBackground('white')">
+            <label for="black">Visible:</label><input type="radio" id="black" name="Background" onclick="changeBackground('black')">
+            <label>Submit:</label><button type="button" onclick="getMadlib()">Submit</button>
+        </div>
+        <div id="MadLibs"></div>
+        <script>
+            function getMadlib(){
+            var name1 = document.getElementsByName("properNoun1").textContent;
+            var name2 = document.getElementsByName("properNoun2").value;
+            var animal1 = document.getElementsByName("animal").value;
+            var part = document.getElementsByName("part1").value;
+            var Thing1 = document.getElementsByName("thing1").value;
+            var Thing2 = document.getElementsByName("thing2").value;
+            var Thing3 = document.getElementsByName("thing3").value;
+            var Thing4 = document.getElementsByName("thing4").value;
+            var adjective = document.getElementsByName("adjective1").value;
+
+            var  MadLib ="";
+            MadLib += "<p> He sat up and " + name1 + "'s heavy " + Thing1 + " fell off him. The hut was full of sunlight, the storm was over, " + name2 + " himself was asleep on"
+            MadLib += "the " + adjective + " " + Thing2 + ", and there was an " + animal1 + "rapping its claw on the window, a" + Thing3 + " held in its " + part + ". " + name2 + " scrambled to his feet, "
+            MadLib += "so happy he felt as though a large balloon was swelling inside him. He went straight to the window and jerked it open. The " +animal1 + " swooped in "
+            MadLib += "and dropped the " + Thing3 + " on top of "+ name1 + ", who did not wake up. The " + animal1 + " then fluttered onto the floor and began to attack " + name1 +"'s" +Thing4+ ".</p>"
+            MadLibs.innerHTML = MadLib;
+
+        }
+        </script>
+    </body>
+    </html>

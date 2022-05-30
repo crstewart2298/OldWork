@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Multiplication Table</title>
+        
+    </head>
+    <body>
+        <pre>
+        <script>
+        var result = '\n *   ';
+        function buff(value){
+             var buff = '';
+             var pad = 4 - value;
+             while( pad-- > 0 )
+             buff += ' ';
+             return buff;
+             }
+             
+             for (var i = -1; i < 13; i++) {
+                 for (var j = -1; j < 13; j++) {
+                     
+                     if(i == -1 && j > -1){
+                         result += '[' + j + ']' + buff((j+'').length+2);
+                     } 
+                     else if(j == -1 && i>-1){
+                         result += '[' + i + ']';
+                         } 
+                         else if(i>-1 && j>-1){
+                             result += buff((i*j+'').length ) + i*j;
+                             }
+                             }
+                             result += '\n'
+                             }
+                             document.write(result)
+        </script>
+        </pre>
+    </body>
