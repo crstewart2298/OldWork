@@ -1,0 +1,75 @@
+coercion : implicitly changing the type of a value in order to complete an operation correctly
+binding : a relationship between a name and something else in a program
+method : a function which performs an action on an object
+overloading : assigning multiple meanings to the same name in a program
+parameter : a variable carrying input in to a function or method
+argument : a value passed in to a parameter
+interpreted : a language that is executed line-by-line by another program
+compiled : a language that is converted from source code in to machine code before it is executed
+runtime error : an error in a program due to it performing an illegal operation during its execution
+syntax error : an error in a program due to it not conforming to the grammar of the language
+operator : a symbol or keyword used to identify an operation to be performed on one or more expressions
+literal : a value written in to the code of a program 
+is : the python operator that determines if the identity of two objects is the same
+== : the python operator that deterimens if the value of two objects is the same
+statement : A single instruction in an imperative program
+side effect : a change in state of a program outside of the current scope, or a change to the environment outside of a program (due to the program)
+block : a sequence of statements and other blocks in a program
+referencing environment : collection of variable bindings available within a certain scope of a program
+mutable : can be changed 
+immutable : cannot be changed
+casting : explicitly converting a value of one type to another
+strong types : a type system in which operations can only be attempted on data that conforms to the type constraints necessary for the operation
+static types : a type system in which the type of values which can be stored in a variable are specified at the time the program is compiled and cannot be changed at run time
+dynamic types : a type system in which the type of values stored in variables may change during run time
+duck : a typing scheme which determines types are compatible as long as the requested methods or properties are present within the object
+short circuit : the type of evaluation of boolean expressions which ends as soon as the final value of the expression can be determined
+syntactic sugar : a language construct that is unnecessary but perhaps makes code shorter or easier to read
+slicing : the process of taking a subsequence of a sequence by specifying a range with the beginning and ending values separated by a colon
+list : a datastructure which contains a sequence of objects and is mutable
+tuple : a datastructure which contains a sequence of objects and is immutable
+set : a datastructure which does not support order or multiplicity of elements and is mutable
+frozen set : a datastructure which does not support order or multiplicity of elements and is immutable
+dictionary : a datastructure which relates arbitrary, hashable, and immutable keys to arbitrary values
+concatenation : an operation which joins two sequences together in a new sequence
+del : the keyword in python used to remove a variable binding (or a key-value relationship from a collection)
+/ : floating point division arithmetic operator
+// : integer division arithmetic operator
+** : exponentiation arithmetic operator
+operator Overloading : associating multiple meanings (semantic interpretations) to the same operator
+boolean Values : true and false
+end of Line Comments : comments comprising the latter half of a line following the # symbol
+zero Indexed : The idea that a list or collection begins at 0
+remove : A way of modifying a list that takes a value out
+insert : A way of modifying a list that adds a value in
+reverse : A way of modifying a list that reverses its order
+append : A way of modifying a list to add a value to the end of the list. 
+extend : A way of modifying a list by adding a sequence of values to it. 
+__le__ : A magic method meaning less than or equal to
+__ge__ : A magic method meaning greater than or equal to
+max : finds the highest value in a sequence
+min : finds the lowest value in a sequence
+in : Tests if a value is contained within a collection.
+not in : tests if a value is not contained within a collection.
+elif : a syntactic construct in python for "else if" in java
+pass : An operation that tells the program to move onto the next instruction. 
+break : A statment that stops a statment early. 
+continue : Skips the remainder of a while block and moves to the next iteration of a loop.
+collection : A group of values range(5, 10) is an example
+global : The scope throughout the entirety of the program, as opposed to a local variable's scope in a function.
+def : Allows the creation of new function objects.
+lambda : Creates a function object thatt is limited to a single return statement
+closures: a capture of the values within an environment associated with a function that was created in that environment
+thunk : Functions with no parameters that just return something. 
+currying : Converts a function with multiple parameters into a function that has one fewer parameter and returns a function that takes an argument for the remaining parameters
+decorator : A higher order function that takes a single function and returns a single function
+generator : a function that produces an iterable value that lazily generates each value in its collection
+iterators : created by generators, have a next method which returns the next yielded value
+streams : a fluent interface for a lazily evaluated collection of values with methods that return other ____'s with some operation applied to them
+predicates : Functions that return a boolean value
+reducing : making a collection of values in to a single value
+type interference : determine a type implicitly but statically
+lazy evaluation : When all elements of a iterator are not generated at once, but as needed.
+tail recursive : when the very last operation of a function is to make a recursive call
+
+

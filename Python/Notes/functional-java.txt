@@ -1,0 +1,25 @@
+public List<Integer> doubling(List<Integer> nums) {
+  return nums.stream()
+     .map(x -> x * 2)
+     .collect(Collectors.toList());
+}
+
+public List<String> lower(List<String> strings) {
+  
+  return strings.stream()
+     .map(str -> str.toLowerCase())
+     .collect(Collectors.toList());
+}
+
+public List<Integer> two2(List<Integer> nums) {
+  return nums.stream()
+     .map(x -> x * 2)
+     .filter(x -> x % 10 != 2)
+     .collect(Collectors.toList());
+}
+
+public List<Integer> no9(List<Integer> nums) {
+  return nums.stream()
+     .filter(x -> x % 10 != 9)
+     .collect(Collectors.toList());
+}
