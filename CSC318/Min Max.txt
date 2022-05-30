@@ -1,0 +1,35 @@
+void getNextMoves0(){//Min Max
+    int me =0;
+    int vs = 0;
+    int score = 0;
+	knightColor[0]={.15,.30,.5};
+        std:vector<int>arr;
+        for(me = 0; me <= 12; me++){//loop all my moves
+            if(states[nextMoveKnight[me]][vs] == 1){//check if possible
+                arr.push_back(me);
+            }
+        }
+        std:vector<int>vs1;
+        for(vs = 0; vs <= 12; vs++){//loop all opponent moves
+            if(states[nextMoveKnight[vs]][lastMoves[1][2]] == 1){//check if possible
+                vs1.push_back(vs);
+            }
+        }
+        for(auto j = vs1.begin();j != vs1.end();j++){
+            int k = 0;
+            vs= vs1[k];
+			k++;
+        for(auto i = arr.begin();i != arr.end();i++){//loop to find best
+            int l = 0;
+            int me2= arr[l];
+			l++;
+            float stats[2];
+            stats[1] = pkProb[me2][vs][1];
+            if (score > stats[1]){//if current min probability
+                score = stats[1];
+                me = me2;
+            }      
+        }
+    }
+    nextMoveKnight[0]=me;//set next move
+}
