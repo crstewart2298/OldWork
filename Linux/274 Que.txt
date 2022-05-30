@@ -1,0 +1,25 @@
+history -c
+mkdir CSC274/assignment3/
+cd CSC274/assignment3/
+pwd
+touch Greetings.txt
+ls
+vi Greetings.txt
+enter Hello, My Name is Chris Stewart
+esc
+:wq
+cp -r CSC274 CSC274Backup
+mv Greetings.txt /home/cstewart2/Hello.txt
+cd /home/cstewart2/CSC274Backup/assignment3/
+vi Greetings.txt
+enter I like command line interface on linux
+esc
+:wq
+echo "Greetings is newer"
+cp -u ~/Hello ~/CSC274Backup/assignment3/Greetings
+The data is the same as before the command cp will not override an existing file
+cd
+rm Hello.txt
+cp -u ~/CSC274Backup/assignment3/Greetings.txt ~/CSC274/assignment3/Greetings.txt
+ln -s CSC274 CSC274_Link
+ln CSC274/assignment3/Greetings.txt CSC274_Link

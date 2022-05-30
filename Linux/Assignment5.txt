@@ -1,0 +1,31 @@
+A5_DIR = "CSC274/Assignment5"
+mkdir -p "$A5_DIR"
+cd CSC274/Assignment5
+echo "Item  Price
+Grape \$1.5/lb"
+echo "echo $USER"|cat >> mylogin.sh
+ls -l mylogin.sh
+chmod 100 mylogin.sh
+sudo ./mylogin.sh
+chmod 720 mylogin.sh
+ls -l mylogin.sh
+chmod 700 mylogin.sh
+ls -l mylogin.sh
+chmod g+w mylogin.sh
+umask 066
+touch newfile
+ls -l newfile
+chmod 644 newfile
+ls -l newfile
+umask 022
+sudo id
+sudo pwd
+ps aux
+cd
+chmod 700 generate_numbers.sh
+./generate_numbers.sh &
+ps aux
+fg % #
+ctrl + z
+ps aux
+bg % #
